@@ -1,11 +1,13 @@
 @font-face {
     font-family: Dongle;
     src: url('/public/assets/fonts/Dongle-Light.ttf');
+    font-display: fallback; /* Avoid text pop-in */
 }
 @font-face {
     font-family: Dongle;
     src: url('/public/assets/fonts/Dongle-Bold.ttf');
     font-weight: bold;
+    font-display: fallback; /* Avoid text pop-in */
 }
 
 * {
