@@ -1,0 +1,9 @@
+name: gemsheffield-com
+static_sites:
+  - build_command: JEKYLL_ENV=production bundle exec jekyll build -d ./build
+    environment_slug: jekyll
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: Willdotwhite/gemsheffield.com
+    name: gemsheffield-com

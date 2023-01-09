@@ -1,25 +1,26 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>About GEMS | Game Experiences Made In Sheffield</title>
-        <link rel="icon" type="image/x-icon" href="./public/assets/images/favicon.png" />
+<head>
+    <meta charset="utf-8">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=fallback" rel="stylesheet">
+    <title>{{ page.title }} | Game Experiences Made In Sheffield</title>
+    <link rel="icon" type="image/x-icon" href="./public/assets/images/favicon.png" />
 
-        <link rel="stylesheet" href="./public/assets/css/normalise@8.0.1.min.css">
-        <link rel="stylesheet" href="./public/assets/css/purecss@3.0.0.css">
-        <link rel="stylesheet" href="./public/assets/css/main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=fallback" rel="stylesheet">
 
-    </head>
+    <link rel="stylesheet" href="./public/assets/css/normalise@8.0.1.min.css">
+    <link rel="stylesheet" href="./public/assets/css/purecss@3.0.0.css">
+    <link rel="stylesheet" href="./public/assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <body>
+</head>
 
+<body>
     <div class="content-wrapper">
         <div class="content">
             <h1 id="title" class="font-dongle is-center">
-                <a href="/index.html">GEMS</a>
+                <a href="/">GEMS</a>
             </h1>
 
             <div class="pure-g" style="margin-bottom: 2rem;">
@@ -40,15 +41,15 @@
                 </div>
             </div>
 
-            <h2 id="subtitle" class="font-dongle is-center">FAQs</h2>
+            <h2 id="subtitle" class="font-dongle is-center" style="margin-bottom: 2rem;">{{ page.subtitle }}</h2>
 
-            <p>Insert FAQs here!</p>
-            <p>Have a question here we've not answered? Message us on Discord!</p>
-
+            <section>
+                {{ content }}
+            </section>
         </div>
 
     </div>
 
-    </body>
+</body>
 
 </html>
