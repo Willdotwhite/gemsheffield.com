@@ -24,6 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   A friendly, inclusive meetup designed to bring together all types of games and the people who make them.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gemsheffield.com/" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: :path
 
 # Build settings
 #theme: minima
