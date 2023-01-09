@@ -1,6 +1,6 @@
 name: gemsheffield-com
 static_sites:
-  - build_command: bundle exec jekyll build -d ./public
+  - build_command: JEKYLL_ENV=production bundle exec jekyll build -d ./build
     environment_slug: jekyll
     github:
       branch: main
