@@ -37,7 +37,7 @@ def get_day_of_week_ordinal(n):
 
 
 def change_meetup_date_on_homepage(meetup_date):
-    with open('./../index.html', 'r') as html_file:
+    with open('./index.html', 'r') as html_file:
         # BeautifulSoup doesn't preserve whitespace by default
         whitespace_preserved_html = '<pre>' + html_file.read() + '</pre>'
         soup = BeautifulSoup(whitespace_preserved_html, features='html.parser')
@@ -47,7 +47,7 @@ def change_meetup_date_on_homepage(meetup_date):
             tag.string.replace_with(meetup_date)
 
     # Save updated HTML
-    with open('./../index.html', 'w') as html_file:
+    with open('./index.html', 'w') as html_file:
         # Remove <pre></pre> tags to save updated HTML contents
         html = str(soup).replace('<pre>', '').replace('</pre>', '')
         html_file.write(html)
