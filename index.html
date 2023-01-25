@@ -3,6 +3,19 @@ layout: default
 path: /
 title: Welcome to GEMS
 subtitle: Game Experiences Made In Sheffield
+buttons:
+    - href: https://www.eventbrite.co.uk/e/gems-game-experiences-made-in-sheffield-coffee-morning-1-tickets-503534524317
+      label: EVENTS
+      colour: green
+    - href: https://discord.gg/7ApCu2JwrE
+      label: DISCORD
+      colour: blue
+    - href: /about.html
+      label: ABOUT
+      colour: yellow
+    - href: /code-of-conduct.html
+      label: CoC
+      colour: red
 ---
 
 <a href="https://goo.gl/maps/CXW9rS8m3XHax55Q7">
@@ -10,29 +23,14 @@ subtitle: Game Experiences Made In Sheffield
     <p class="is-center" style="margin-top: 0; font-size: 1.5rem">Click here for directions</p>
 </a>
 
+<!-- Homepage buttons -->
 <div class="pure-g pure-g-contained" style="max-width: 70%; margin: 0 auto;">
+    {% for button in page.buttons %}
     <div class="l-box pure-u-1 pure-sm-1-2 pure-u-md-1-2 pure-u-lg-1-2" style="text-align: center">
         <div style="display: inline-block; position: relative; margin: 0 0.4rem;">
-            <a class="gem-button-text" href="https://www.eventbrite.co.uk/e/gems-game-experiences-made-in-sheffield-coffee-morning-1-tickets-503534524317">EVENTS</a>
-            <img alt="" src="public/assets/images/blank/green.svg" style="max-width: 100%;"/>
+            <a class="gem-button-text" href="{{ button.href }}">{{ button.label }}</a>
+            <img alt="" src="public/assets/images/blank/{{ button.colour }}.svg" style="max-width: 100%;"/>
         </div>
     </div>
-    <div class="l-box pure-u-1 pure-sm-1-2 pure-u-md-1-2 pure-u-lg-1-2" style="text-align: center">
-        <div style="display: inline-block; position: relative; margin: 0 0.4rem;">
-            <a class="gem-button-text" href="https://discord.gg/7ApCu2JwrE">DISCORD</a>
-            <img alt="" src="public/assets/images/blank/blue.svg" style="max-width: 100%;"/>
-        </div>
-    </div>
-    <div class="l-box pure-u-1 pure-sm-1-2 pure-u-md-1-2 pure-u-lg-1-2" style="text-align: center">
-        <div style="display: inline-block; position: relative; margin: 0 0.4rem;">
-            <a class="gem-button-text" href="/about.html">ABOUT</a>
-            <img alt="" src="public/assets/images/blank/yellow.svg" style="max-width: 100%;"/>
-        </div>
-    </div>
-    <div class="l-box pure-u-1 pure-sm-1-2 pure-u-md-1-2 pure-u-lg-1-2" style="text-align: center">
-        <div style="display: inline-block; position: relative; margin: 0 0.4rem;">
-            <a class="gem-button-text" href="/code-of-conduct.html">CoC</a>
-            <img alt="" src="public/assets/images/blank/red.svg" style="max-width: 100%;"/>
-        </div>
-    </div>
+    {%- endfor %}
 </div>
