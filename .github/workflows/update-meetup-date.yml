@@ -33,7 +33,7 @@ jobs:
           git add -A
           git diff-index --quiet HEAD || (git commit -a -m "[AUTO] Updated meetup date")
 
-      - name: push changes
+      - name: Push new commit
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
