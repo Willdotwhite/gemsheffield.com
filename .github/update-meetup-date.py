@@ -20,10 +20,15 @@ def get_meetup_date():
     current_month = today.month
     current_day = today.day
 
-    if current_day < 21:
-        return get_meetup_day_for_month(current_year, current_month)
+    meetup_this_month = get_meetup_day_for_month(current_year, current_month)
+
+    # If the meetup hasn't happened yet this month
+    if current_day < meetup_this_month.day:
+        return meetup_this_month
+    # If the meetup is next month (non-December)
     elif current_month < 12:
         return get_meetup_day_for_month(current_year, current_month + 1)
+    # If it's December, and so the meetup is next January
     else:
         return get_meetup_day_for_month(current_year + 1, 1)
 
