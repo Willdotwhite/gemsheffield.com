@@ -9,8 +9,7 @@ def get_meetup_day_for_month(year, month):
     month_cal = c.monthdatescalendar(year, month)
     saturdays_for_month = [day for week in month_cal for day in week if
                            day.weekday() == calendar.SATURDAY and day.month == month]
-    third_saturday = saturdays_for_month[2]
-    return third_saturday
+    return saturdays_for_month[1]  # Second Saturday of the month
 
 
 def get_meetup_date():
