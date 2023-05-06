@@ -19,6 +19,17 @@ def get_meetup_date():
     current_month = today.month
     current_day = today.day
 
+    # Overrides allow us to shift dates for whatever reason,
+    # without having to record this mess every time
+    overrides = {
+        "2023_5":  datetime.date(2023, 5, 20)
+    }
+
+    override_key = f'{current_year}_{current_month}'
+    if override_key in overrides:
+        return overrides.get(override_key)
+
+
     meetup_this_month = get_meetup_day_for_month(current_year, current_month)
 
     # If the meetup hasn't happened yet this month
