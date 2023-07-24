@@ -23,7 +23,8 @@ def get_meetup_date():
     # without having to record this mess every time
     overrides = {
         "2023_5":  datetime.date(2023, 5, 20),
-        "2023_8":  datetime.date(2023, 7, 20)
+        "2023_7":  datetime.date(2023, 8, 20),
+        "2023_8":  datetime.date(2023, 8, 20)
     }
 
     override_key = f'{current_year}_{current_month}'
