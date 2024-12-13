@@ -1,8 +1,8 @@
 name: Update Meetup Date
 
 on:
-  schedule:
-    - cron: '0 14 * * 6'
+  # schedule:
+    # - cron: '0 14 * * 6'
   workflow_dispatch:
 
 jobs:
